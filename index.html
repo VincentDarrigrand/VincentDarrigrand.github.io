@@ -1,5 +1,13 @@
 <html>
-<link href="style.css" rel="stylesheet" type="text/css">
+<!-- <link href="style.css" rel="stylesheet" type="text/css"> -->
+<meta name="viewport" content="width=device-width,initial-scale=2">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css"> -->
+<style>
+
+</style>
 
 <head>
 
@@ -18,79 +26,107 @@
     </style>
 </head>
 
+
 <body>
+    <!-- <div class="w3-container w3-black"> -->
+    <header class="w3-card-4">
+        <!-- <div class="w3-container w3-theme w3-card"> -->
+        <h1>Home page of Vincent Darrigrand </h1>
+    </header>
+    <div class="w3-container">
+        <table>
+            <tr>
+                <td>
+                    <div class="w3-card-4">
+                        <a href="mailto:vincent.darrigrand@gmail.com "> <img src="photo.jpeg " alt="photo " class="w3-image w3-hover-opacity "></a>
+                        <div class=" w3-container ">
+                            <h6><b>Vincent Darrigrand</b></h6>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <table>
 
-    <h1>Home page of Vincent Darrigrand </h1>
+                        <tr>
+                            <td>Post-doc researcher at IRIT in <a href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/ ">APO team</a></tr>
+                        </td>
+                        <tr>
+                            <td><a href="cv_Vincent_Darrigrand.pdf ">Curriculum Vitae</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://orcid.org/0000-0001-7818-8216 ">orcid</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://hal.archives-ouvertes.fr/search/index/q/*/authFullName_s/Vincent+Darrigrand ">HAL</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="mailto:vincent.darrigrand@gmail.com "><button> <i class="fa fa-envelope-o fa-2x"></i></button></a>
+                                <!-- <a href="mailto:vincent.darrigrand@gmail.com "><button><i class="material-icons" style="font-size:48px">contact_mail</i>
+                               </button>
+                              </a> -->
+                        </tr>
+                        </td>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-    <table>
-        <tr>
-            <td>
-                <img src="photo.jpg" alt="photo" height=200px>
-            </td>
-            <td>
-                <table>
-                    <tr>
-                        <td><a href="mailto:vincent.darrigrand@gmail.com">Contact me</a></tr>
-                    </td>
-                    <tr>
-                        <td>Post-doc researcher at IRIT in <a href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/">APO team</a></tr>
-                    </td>
-                    <tr>
-                        <td><a href="cv_Vincent_Darrigrand.pdf">Curriculum Vitae</a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://orcid.org/0000-0001-7818-8216">orcid</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://hal.archives-ouvertes.fr/search/index/q/*/authFullName_s/Vincent+Darrigrand">HAL</a></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-
-    <!-- <h2>Keywords</h2> -->
-
-    <bibtex src="Perso.bib"></bibtex>
-
-
-    <h2>Publications</h2>
-
-    <div class="bibtex_template">
-
+    <section class="w3-container ">
+        <h2>Keywords</h2>
         <ul>
-            <span class="year" style="font-weight: bold;"></span>
-            <span class="if doi">
-        <a class="bibtexVar" href=" https://doi.org/+DOI+" extra="doi">
-          <span class="title"></span>
-            </a>
-            </span>
-            <span class="if !doi">
-        <a class="bibtexVar" href="+URL+" extra="url">
-          <span class="title"></span>
-            </a>
-            </span>
-            <span class="if hal">
-            <a class="bibtexVar" href="+HAL+" extra="hal">
+            <li> Finite Element Method</li>
+            <li>Mesh Adaptivity</li>
+            <li>Goal-Oriented Adaptivity</li>
+            <li>Numerical Linear Algebra</li>
+            <li>High-Performance Computing</li>
+            <li>Geophysics</li>
+            <li>Structural Mechanics</li>
+        </ul>
+    </section>
+    <bibtex src="Perso.bib "></bibtex>
+
+    <section class="w3-container ">
+        <h2>Publications</h2>
+
+
+
+        <div class="bibtex_template ">
+
+            <ul class="w3-ul ">
+                <span class="year " style="font-weight: bold; "></span>
+                <span class="if doi ">
+        <a class="bibtexVar " href=" https://doi.org/+DOI+ " extra="doi ">
+          <span class="title "></span>
+                </a>
+                </span>
+                <span class="if !doi ">
+        <a class="bibtexVar " href="+URL+ " extra="url ">
+          <span class="title "></span>
+                </a>
+                </span>
+                <span class="if hal ">
+            <a class="bibtexVar " href="+HAL+ " extra="hal ">
               (Preprint)
                           </a>
                         </span>
-            <br />
-            <span class="author"></span>
+                <br />
+                <span class="author "></span>
 
-        </ul>
-    </div>
-    <div class="bibtex_structure">
-        <div class="sort year" extra="DESC number">
-            <div class="templates"></div>
+            </ul>
         </div>
-    </div>
+        <div class="bibtex_structure ">
+            <div class="sort year " extra="DESC number ">
+                <div class="templates "></div>
+            </div>
+        </div>
 
-    <div id="bibtex_display"> </div>
+        <div id="bibtex_display "> </div>
 
+    </section>
 
 </body>
 
