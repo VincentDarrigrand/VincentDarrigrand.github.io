@@ -39,6 +39,12 @@ a:focus {
                     --shade-6: #000000;
                 }
 
+                .footer .ai:hover,
+                .footer .fas:hover,
+                .footer .fab:hover {
+                    color: var(--shade-2);
+                }
+
                 section {
                     padding-top: 50px;
                 }
@@ -77,6 +83,12 @@ a:focus {
 
                 .footer {
                     background-color: var(--shade-6);
+                }
+
+                .footer .ai,
+                .footer .fas,
+                .footer .fab {
+                    color: var(--shade-1);
                 }
                 /*******************************************************************************
 
@@ -2450,6 +2462,7 @@ jQuery.mmenu themes extension CSS
                     justify-content: space-around;
                     padding-top: 5px;
                     padding-bottom: 5px;
+                    font-size: 3em;
                 }
                 /* 3. PAGES
 --------------------------------------------------------------------------------
@@ -2807,15 +2820,14 @@ jQuery.mmenu themes extension CSS
                     display: block;
                     background: url('http://starscontest.com/winner-ribbon.png') no-repeat;
                 }
-
-                #footer a {
+                /* #footer a {
                     text-decoration: none;
                     color: #999;
                 }
 
                 #footer a:hover {
                     color: fff;
-                }
+                } */
                 /* Animations */
 
                 @keyframes arrows {
