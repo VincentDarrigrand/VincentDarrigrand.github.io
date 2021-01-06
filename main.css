@@ -226,6 +226,7 @@ Date: March 2014
                 h2 {
                     /*font: 3em/2em 'Halant', serif;*/
                     text-align: center;
+                    padding-top: 50pt;
                 }
 
                 h3 {
@@ -237,9 +238,8 @@ Date: March 2014
                     /*font: 3em/2em 'Halant', serif;*/
                     text-align: center;
                 }
+                /* .btn {
 
-                .btn {
-                    /*font: 600 1.1em 'Exo 2', sans-serif;*/
                     text-decoration: none;
                     text-align: center;
                     text-transform: uppercase;
@@ -259,7 +259,7 @@ Date: March 2014
                     background: #fcfcfc;
                     color: #000;
                     text-decoration: none;
-                }
+                } */
                 /* 1.5 Image replacement
 ------------------------------------------------------------------------------*/
 
@@ -2473,8 +2473,10 @@ jQuery.mmenu themes extension CSS
                     right: 0;
                     background: #222;
                     opacity: 0.75;
-                    text-align: center;
+                    /* text-align: center; */
                     /* height: 50px; */
+                    display: flex;
+                    justify-content: space-around;
                     padding-top: 5px;
                     padding-bottom: 5px;
                 }
