@@ -49,7 +49,7 @@ a:focus {
 
                 section {
                     padding-top: 25px;
-                    padding-bottom: 25px;
+                    padding-bottom: 45px;
                 }
 
                 .unityblock {
@@ -2476,29 +2476,32 @@ jQuery.mmenu themes extension CSS
                 /* 3.1 Home
 ------------------------------------------------------------------------------*/
                 /* About */
-
-                #about {
+                /* #about {
                     padding-top: 60px;
-                }
-
-                #about figure {
-                    /* float: center; */
-                    /* width: 255px;
+                } */
+                /* #about figure { */
+                /* float: center; */
+                /* width: 255px;
         height: 255px; */
-                    /* width: 150px; */
-                    /* margin: 5px auto 50px; */
-                    /* border: 3px solid #8b8b8b; */
-                    /* overflow: hidden;
+                /* width: 150px; */
+                /* margin: 5px auto 50px; */
+                /* border: 3px solid #8b8b8b; */
+                /* overflow: hidden;
         -webkit-border-radius: 50%;
         border-radius: 50%; */
-                    /* float: none; */
-                    /* width: 25%; */
-                    /* text-align: center; */
-                }
+                /* float: none; */
+                /* width: 25%; */
+                /* text-align: center; */
+                /* } */
 
                 #about img {
-                    width: 255px;
-                    float: none;
+                    width: 200px;
+                    height: auto;
+                    /* max-width: 15%; */
+                    /* width: 10px !important; */
+                    /* height: 10px; */
+                    /* max-width: 10px; */
+                    /* float: none; */
                     /* height: 236; */
                 }
                 /* #about .text {
