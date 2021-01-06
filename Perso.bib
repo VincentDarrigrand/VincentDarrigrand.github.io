@@ -14,61 +14,6 @@
   publisher = {Springer Science and Business Media {LLC}}
 }
 
-@article{Darrigrand.RodriguezRozas.ea:2018,
-  author   = {Darrigrand, Vincent and Rodr{\'i}guez-Rozas, {\'A}ngel and Muga, Ignacio and Pardo, David and Romkes, Albert and Prudhomme, Serge},
-  journal  = {International Journal for Numerical Methods in Engineering},
-  title    = {Goal-oriented adaptivity using unconventional error representations for the multi-dimensional {H}elmholtz equation},
-  year     = {2018},
-  issn     = {1097-0207},
-  number   = {1},
-  pages    = {22--42},
-  volume   = {113},
-  abstract = {In goal‐oriented adaptivity, the error in the quantity of interest is represented using the error functions of the direct and adjoint problems. This error representation is subsequently bounded above by element‐wise error indicators that are used to drive optimal refinements. In this work, we propose to replace, in the error representation, the adjoint problem by an alternative operator. The main advantage of the proposed approach is that, when judiciously selecting such alternative operator, the corresponding upper bound of the error representation becomes sharper, leading to a more efficient goal‐oriented adaptivity.
-
-While the method can be applied to a variety of problems, we focus here on two‐ and three‐dimensional (2‐D and 3‐D) Helmholtz problems. We show via extensive numerical experimentation that the upper bounds provided by the alternative error representations are sharper than the classical ones and lead to a more robust p‐adaptive process. We also provide guidelines for finding operators delivering sharp error representation upper bounds. We further extend the results to a convection‐dominated diffusion problem as well as to problems with discontinuous material coefficients. Finally, we consider a sonic logging‐while‐drilling problem to illustrate the applicability of the proposed method.},
-  doi      = {10.1002/nme.5601},
-  file     = {:Darrigrand.RodriguezRozas.ea_2018 - Goal Oriented Adaptivity Using Unconventional Error Representations for the Multi Dimensional Helmholtz Equation.pdf:PDF},
-  hal      = {https://hal.archives-ouvertes.fr/hal-01691495v1},
-  keywords = {Goal-Oriented Adaptivity, Finite Element Methods, Error Representation, Helmholtz Equation; Goal-oriented},
-  url      = {http://dx.doi.org/10.1002/nme.5601}
-}
-
-@article{Darrigrand.RodriguezRozas.ea:2017,
-  author   = {Vincent Darrigrand and {\'A}ngel Rodr{\'i}guez-Rozas and David Pardo and Ignacio Muga},
-  journal  = {Procedia Computer Science},
-  title    = {Goal-Oriented $p$-Adaptivity using Unconventional Error Representations for a 1{D} Steady State Convection-Diffusion Problem},
-  year     = {2017},
-  issn     = {1877-0509},
-  month    = aug,
-  note     = {International Conference on Computational Science, {ICCS} 2017, 12-14 June 2017, Zurich, Switzerland},
-  pages    = {848 - 856},
-  volume   = {108},
-  abstract = {Abstract This work proposes the use of an alternative error representation for Goal-Oriented Adaptivity (GOA) in context of steady state convection dominated diffusion problems. It introduces an arbitrary operator for the computation of the error of an alternative dual problem. From the new representation, we derive element-wise estimators to drive the adaptive algorithm. The method is applied to a one dimensional (1D) steady state convection dominated diffusion problem with homogeneous Dirichlet boundary conditions. This problem exhibits a boundary layer that produces a loss of numerical stability. The new error representation delivers sharper error bounds. When applied to a p-GOA Finite Element Method (FEM), the alternative error representation captures earlier the boundary layer, despite the existing spurious numerical oscillations.},
-  comment  = {ICCS is a CORE A conference (\url{http://portal.core.edu.au/conf-ranks/952/}).},
-  doi      = {10.1016/j.procs.2017.05.168},
-  file     = {:Darrigrand.RodriguezRozas.ea_2017 - Goal Oriented $p$ Adaptivity Using Unconventional Error Representations for a 1D Steady State Convection Diffusion Problem.pdf:PDF},
-  hal      = {https://hal.archives-ouvertes.fr/hal-01691499v1},
-  keywords = {Convection Diffusion; Goal-oriented},
-  url      = {http://www.sciencedirect.com/science/article/pii/S1877050917307512}
-}
-
-@article{Darrigrand.Pardo.ea:2015,
-  author   = {Vincent Darrigrand and David Pardo and Ignacio Muga},
-  journal  = {Computers \& Mathematics with Applications},
-  title    = {Goal-oriented adaptivity using unconventional error representations for the 1{D} {H}elmholtz equation},
-  year     = {2015},
-  issn     = {0898-1221},
-  number   = {9},
-  pages    = {964 - 979},
-  volume   = {69},
-  abstract = {In this work, the error of a given output functional is represented using bilinear forms that are different from those given by the adjoint problem. These representations can be employed to design novel h, p, and hp energy-norm and goal-oriented adaptive algorithms. Numerical results in 1D show that, for wave propagation problems, the advantages of this new representation are notorious when selecting the Laplace equation as the dual problem. Specifically, the computed upper bounds of the new error representation are sharper than the classical ones used in both energy-norm and goal-oriented adaptive methods, especially when the dispersion (pollution) error is significant.},
-  doi      = {10.1016/j.camwa.2015.03.006},
-  file     = {:DarrigrandPardo_2015 - Goal Oriented Adaptivity Using Unconventional Error Representations for the 1D Helmholtz Equation.pdf:PDF},
-  hal      = {https://hal.archives-ouvertes.fr/hal-01140748v1},
-  keywords = {Helmholtz equation, Goal-oriented},
-  url      = {http://www.sciencedirect.com/science/article/pii/S0898122115001017}
-}
-
 @article{Darrigrand.Pardo.ea:2020,
   author    = {Vincent Darrigrand and David Pardo and Th{\'{e}}ophile Chaumont-Frelet and Ignacio G{\'{o}}mez-Revuelto and Luis Emilio Garcia-Castillo},
   journal   = {Finite Elements in Analysis and Design},
@@ -96,6 +41,42 @@ While the method can be applied to a variety of problems, we focus here on two�
   hal      = {https://hal.archives-ouvertes.fr/hal-03092551v1}
 }
 
+@article{Darrigrand.RodriguezRozas.ea:2018,
+  author   = {Darrigrand, Vincent and Rodr{\'i}guez-Rozas, {\'A}ngel and Muga, Ignacio and Pardo, David and Romkes, Albert and Prudhomme, Serge},
+  journal  = {International Journal for Numerical Methods in Engineering},
+  title    = {Goal-oriented adaptivity using unconventional error representations for the multi-dimensional {H}elmholtz equation},
+  year     = {2018},
+  issn     = {1097-0207},
+  number   = {1},
+  pages    = {22--42},
+  volume   = {113},
+  abstract = {In goal‐oriented adaptivity, the error in the quantity of interest is represented using the error functions of the direct and adjoint problems. This error representation is subsequently bounded above by element‐wise error indicators that are used to drive optimal refinements. In this work, we propose to replace, in the error representation, the adjoint problem by an alternative operator. The main advantage of the proposed approach is that, when judiciously selecting such alternative operator, the corresponding upper bound of the error representation becomes sharper, leading to a more efficient goal‐oriented adaptivity.
+
+While the method can be applied to a variety of problems, we focus here on two‐ and three‐dimensional (2‐D and 3‐D) Helmholtz problems. We show via extensive numerical experimentation that the upper bounds provided by the alternative error representations are sharper than the classical ones and lead to a more robust p‐adaptive process. We also provide guidelines for finding operators delivering sharp error representation upper bounds. We further extend the results to a convection‐dominated diffusion problem as well as to problems with discontinuous material coefficients. Finally, we consider a sonic logging‐while‐drilling problem to illustrate the applicability of the proposed method.},
+  doi      = {10.1002/nme.5601},
+  file     = {:Darrigrand.RodriguezRozas.ea_2018 - Goal Oriented Adaptivity Using Unconventional Error Representations for the Multi Dimensional Helmholtz Equation.pdf:PDF},
+  hal      = {https://hal.archives-ouvertes.fr/hal-01691495v1},
+  keywords = {Goal-Oriented Adaptivity, Finite Element Methods, Error Representation, Helmholtz Equation; Goal-oriented}
+}
+
+@proceedings{Darrigrand.RodriguezRozas.ea:2017,
+  title    = {Goal-Oriented $p$-Adaptivity using Unconventional Error Representations for a 1{D} Steady State Convection-Diffusion Problem},
+  year     = {2017},
+  month    = aug,
+  note     = {International Conference on Computational Science, {ICCS} 2017, 12-14 June 2017, Zurich, Switzerland},
+  volume   = {108},
+  abstract = {Abstract This work proposes the use of an alternative error representation for Goal-Oriented Adaptivity (GOA) in context of steady state convection dominated diffusion problems. It introduces an arbitrary operator for the computation of the error of an alternative dual problem. From the new representation, we derive element-wise estimators to drive the adaptive algorithm. The method is applied to a one dimensional (1D) steady state convection dominated diffusion problem with homogeneous Dirichlet boundary conditions. This problem exhibits a boundary layer that produces a loss of numerical stability. The new error representation delivers sharper error bounds. When applied to a p-GOA Finite Element Method (FEM), the alternative error representation captures earlier the boundary layer, despite the existing spurious numerical oscillations.},
+  author   = {Vincent Darrigrand and {\'A}ngel Rodr{\'i}guez-Rozas and David Pardo and Ignacio Muga},
+  comment  = {ICCS is a CORE A conference (\url{http://portal.core.edu.au/conf-ranks/952/}).},
+  doi      = {10.1016/j.procs.2017.05.168},
+  file     = {:Darrigrand.RodriguezRozas.ea_2017 - Goal Oriented $p$ Adaptivity Using Unconventional Error Representations for a 1D Steady State Convection Diffusion Problem.pdf:PDF},
+  hal      = {https://hal.archives-ouvertes.fr/hal-01691499v1},
+  issn     = {1877-0509},
+  journal  = {Procedia Computer Science},
+  keywords = {Convection Diffusion; Goal-oriented},
+  pages    = {848 - 856}
+}
+
 @phdthesis{Darrigrand:2017,
   author   = {Vincent Darrigrand},
   school   = {University of the Basque Country (UPV) and University of Pau (UPPA)},
@@ -108,4 +89,20 @@ While the method can be applied to a variety of problems, we focus here on two�
   file     = {:Darrigrand_2017 - Goal Oriented Adaptivity Using Unconventional Error Representations.pdf:PDF},
   hal      = {https://hal.archives-ouvertes.fr/tel-03092582},
   url      = {http://www.theses.fr/2017PAUU3011}
+}
+
+@article{Darrigrand.Pardo.ea:2015,
+  author   = {Vincent Darrigrand and David Pardo and Ignacio Muga},
+  journal  = {Computers \& Mathematics with Applications},
+  title    = {Goal-oriented adaptivity using unconventional error representations for the 1{D} {H}elmholtz equation},
+  year     = {2015},
+  issn     = {0898-1221},
+  number   = {9},
+  pages    = {964 - 979},
+  volume   = {69},
+  abstract = {In this work, the error of a given output functional is represented using bilinear forms that are different from those given by the adjoint problem. These representations can be employed to design novel h, p, and hp energy-norm and goal-oriented adaptive algorithms. Numerical results in 1D show that, for wave propagation problems, the advantages of this new representation are notorious when selecting the Laplace equation as the dual problem. Specifically, the computed upper bounds of the new error representation are sharper than the classical ones used in both energy-norm and goal-oriented adaptive methods, especially when the dispersion (pollution) error is significant.},
+  doi      = {10.1016/j.camwa.2015.03.006},
+  file     = {:DarrigrandPardo_2015 - Goal Oriented Adaptivity Using Unconventional Error Representations for the 1D Helmholtz Equation.pdf:PDF},
+  hal      = {https://hal.archives-ouvertes.fr/hal-01140748v1},
+  keywords = {Helmholtz equation, Goal-oriented}
 }
