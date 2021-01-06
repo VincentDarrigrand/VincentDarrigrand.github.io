@@ -19,52 +19,57 @@ a:focus {
 
 
 */
-
-                [data-theme="color-1"] {
+                /* [data-theme="color-1"] {
                     --shade-1: #FFFFFF;
                     --shade-2: #C4CCA7;
                     --shade-3: #99B387;
                     --shade-4: #99B387;
                     --shade-5: #7998A5;
-                    --shade-6: #1F3037;
-                    --shade-7: #474747;
-                }
-
-                [data-theme="color-2"] {
-                    --shade-1: #FFFFFF;
-                    --shade-2: #D0B895;
-                    --shade-3: #99B387;
-                    --shade-4: #974BAE;
-                    --shade-5: #29371F;
                     --shade-6: #000000;
+                    --shade-7: #474747;
+                } */
+
+                [data-theme="color-1"] {
+                    --shade-0: #FFFFFF;
+                    --shade-1: #E2E4C8;
+                    --shade-2: #D2D6A9;
+                    --shade-3: #879B5F;
+                    --shade-4: #698769;
+                    --shade-5: #162716;
+                    --shade-6: #000000;
+                    --shade-7: #474747;
                 }
 
                 .footer .ai:hover,
                 .footer .fas:hover,
-                .footer .fab:hover {
-                    color: var(--shade-2);
+                .footer .fab:hover,
+                main a>img:hover {
+                    color: var(--shade-4);
                 }
 
                 section {
-                    padding-top: 50px;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                }
+
+                .unityblock {
+                    color: var(--shade-6);
                 }
 
                 .unityblock:nth-of-type(2n+1) {
-                    background-color: var(--shade-1);
-                    color: var(--shade-7);
+                    background-color: var(--shade-0);
                 }
 
                 .unityblock:nth-of-type(5n+2) {
                     background-color: var(--shade-2);
-                    color: var(--shade-7);
                 }
 
                 #header .navbar {
-                    background-color: var(--shade-6);
+                    background-color: var(--shade-5);
                 }
 
                 #header {
-                    background-color: var(--shade-5);
+                    background-color: var(--shade-4);
                 }
 
                 #header h1 {
@@ -72,17 +77,17 @@ a:focus {
                 }
 
                 .row .well {
-                    background: var(--shade-2) !important;
+                    background: var(--shade-0) !important;
                     /* background: white; */
                     color: var(--shade-7)
                 }
 
                 #contact {
-                    background-color: var(--shade-6);
+                    background-color: var(--shade-5);
                 }
 
                 .footer {
-                    background-color: var(--shade-6);
+                    background-color: var(--shade-5);
                 }
 
                 .footer .ai,
@@ -209,7 +214,8 @@ Date: March 2014
                 h2 {
                     /*font: 3em/2em 'Halant', serif;*/
                     text-align: center;
-                    padding-top: 50pt;
+                    padding-top: 25pt;
+                    padding-bottom: 25pt;
                 }
 
                 h3 {
