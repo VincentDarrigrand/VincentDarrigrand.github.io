@@ -248,7 +248,6 @@ Date: March 2014
                         border: 2px solid var(--shade-6) !important;
                         background: var(--shade-5) !important;
                         color: var(--shade-1)!important;
-                        /* width: 200px!important; */
                         white-space: normal !important;
                     }
 
@@ -265,11 +264,11 @@ Date: March 2014
                     }
 
                     .modal-body {
-                        background-color: var(--shade-5);
+                        background-color: var(--shade-5)!important;
                     }
 
                     .btn-group-vertical>button {
-                        margin-bottom: 10px;
+                        margin-bottom: 10px!important;
                         border-radius: 10px !important;
                     }
 
