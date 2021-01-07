@@ -83,8 +83,23 @@ a:focus {
                 }
 
                 #contact {
-                    background-color: var(--shade-5);
+                    background-color: var(--shade-2);
+                    padding-bottom: 100px;
                 }
+                /* #contact>.container { */
+                /* display: flex;
+                    justify-content: center; */
+                /* } */
+
+                #mapid {
+                    /* width: 425px; */
+                    height: 350px;
+                    /* height: auto; */
+                    max-width: 500px;
+                    z-index: 0;
+                }
+
+                address .container {}
 
                 .footer {
                     background-color: var(--shade-5);
@@ -94,6 +109,10 @@ a:focus {
                 .footer .fas,
                 .footer .fab {
                     color: var(--shade-1);
+                }
+
+                iframe .container {
+                    max-width: 500px;
                 }
                 /*******************************************************************************
 
@@ -2436,6 +2455,7 @@ jQuery.mmenu themes extension CSS
 
                 main {
                     position: relative;
+                    padding-bottom: 75px;
                 }
 
                 main h1 {
@@ -2445,16 +2465,14 @@ jQuery.mmenu themes extension CSS
                 }
                 /* 2.6 Footer
 ------------------------------------------------------------------------------*/
-
-                #contact {
+                /* #contact {
                     background: #252525;
-                }
-
-                #contact .container {
-                    padding-top: 25px;
-                    padding-bottom: 25px;
-                    /* color: #eaeaea; */
-                }
+                } */
+                /* #contact .container { */
+                /* padding-top: 25px; */
+                /* padding-bottom: 25px; */
+                /* color: #eaeaea; */
+                /* } */
 
                 .footer {
                     position: fixed;

@@ -9,19 +9,18 @@
 
 <head>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
+
     <bibtex src="Perso.bib "></bibtex>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link rel="stylesheet" media="all" href="normalize.css">
     <link rel="stylesheet" media="all" href="main.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <script src="https://kit.fontawesome.com/f0f2f8d409.js" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js" integrity="sha256-ABVkpwb9K9PxubvRrHMkk6wmWcIHUE9eBxNZLXYQ84k=" crossorigin="anonymous"></script> -->
 
 
     <!-- Latest compiled and minified CSS -->
@@ -29,9 +28,6 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 
 
@@ -69,7 +65,7 @@
 
                         <li><a href="#publications">Publications</a></li>
 
-                        <!-- <li><a href="#contact">Contact</a></li> -->
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,6 +118,7 @@
                 </p>
             </div>
         </section>
+
 
 
         <section class="unityblock" id="publications">
@@ -218,7 +215,21 @@
             </div>
         </section>
     </main>
+    <section class="unityblock" id="contact">
+        <h2>Contact</h2>
 
+        <div class="container">
+
+            <div class="container  col-sm-6" id="mapid"></div>
+
+            <address class="container  col-sm-6">
+          We can contact me at:<br>
+      <a href="mailto:vincent.darrigrand@gmail.com">vincent.darrigrand@gmail.com </a><br>
+      <a href="tel:+33663488425">+33 (0) 6 63 48 84 25</a><br>
+      <a href="https://www.openstreetmap.org/?mlat=43.60218&amp;mlon=1.45499#map=19/43.60218/1.45499">2 rue Camichel, 31071 Toulouse, France</a>
+</address>
+        </div>
+    </section>
     <!-- <section class="col-xs-12 col-sm-12" id="contact">
         <p> mettre l'adresse de l'irit qcd qdf <br><br>
         </p>
@@ -233,12 +244,39 @@
 
         <a href="https://www.linkedin.com/in/vincent-darrigrand-3b0875b0/ "><i  class="fab fa-linkedin-in"></i></a>
 
-        <a href="mailto:vincent.darrigrand@gmail.com "><i  class="fas fa-envelope"></i></a>
+        <a href="mailto:vincent.darrigrand@gmail.com"><i  class="fas fa-envelope"></i></a>
         <a href="https://scholar.google.com/citations?user=qqCseioAAAAJ&hl" style="vertical-align:top; "><i  class="ai ai-google-scholar"></i></a>
 
         <!-- <div class="col-xs-2 col-sm-2"></div> -->
     </div>
 
+    <!--                   Scripts               -->
+    <!-- bibtex-js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
+
+    <!-- font awsome -->
+    <script src="https://kit.fontawesome.com/f0f2f8d409.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <!-- leaflet open street map -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script>
+        var mymap = L.map('mapid').setView([43.6024877, 1.4549394], 15);
+        L.marker([43.6024877, 1.4549394]).addTo(mymap)
+            .bindPopup("<center><b>Vincent Darrigrand</b><br>CNRS-IRIT-ENSEEIHT</center>").openPopup();
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+        }).addTo(mymap);
+    </script>
 </body>
 
 </html>
