@@ -104,19 +104,163 @@
         </section>
         <section class="unityblock" id="research">
             <h2>Research interests</h2>
-            <div class="text container">
-                <p>
-                    <ul>
-                        <li>Finite Element Method</li>
-                        <li>Mesh Adaptivity</li>
-                        <li>Goal-Oriented Adaptivity</li>
-                        <li>Numerical Linear Algebra</li>
-                        <li>High-Performance Computing</li>
-                        <li>Geophysics</li>
-                        <li>Structural Mechanics</li>
-                    </ul>
-                </p>
+            <div class="container" id="Keywords">
+                <h3>Keywords</h3>
+                <div class="text">
+
+                    <p>
+                        <ul>
+                            <li>Finite Element Method</li>
+                            <li>Mesh Adaptivity</li>
+                            <li>Goal-Oriented Adaptivity</li>
+                            <li>Geophysics</li>
+                            <li>Numerical Linear Algebra</li>
+                            <li>Domain Decomposition</li>
+                            <li>High-Performance Computing</li>
+                            <li>Structural Mechanics</li>
+                        </ul>
+                    </p>
+                </div>
             </div>
+
+            <div class="container" id="Preview">
+                <h3>Previews</h3>
+
+                <div class="container">
+
+                    <div class="btn-group-vertical" role="group">
+                        <button type="button" class="btn btn-primary btn-lg btn-cstm" data-toggle="modal" data-target="#GOAerr" title="fancy title">
+                      Goal-Oriented Error Representations
+                    </button>
+                        <button type="button" class="btn btn-primary btn-lg btn-cstm" data-toggle="modal" data-target="#hpadapt" title="fancy title">
+                      Painless <em>hp</em>-adaptivity
+                    </button>
+                        <button type="button" class="btn btn-primary btn-lg btn-cstm" data-toggle="modal" data-target="#GKB" title="fancy title">
+                      GKB for Structural Mechanics
+                    </button>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-lg btn-cstm" data-toggle="modal" data-target="#HPDDM" title="fancy title">
+                Domain Decomposition with Inexact Direct Solvers
+              </button>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="GOAerr" tabindex="-1" role="dialog" aria-labelledby="GOAerrLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="GOAerrLabel">Unconventional error representations for Goal-Oriented Problems</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img style="width: 100%;height:auto ;" src="https://media.giphy.com/media/H6ziGeWoLU6sN6KRaV/giphy.gif" alt="comming soon">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-primary">Save Changes</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="hpadapt" tabindex="-1" role="dialog" aria-labelledby="hpadaptLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="hpadaptLabel">Painless <em>hp</em>-adaptivity</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img style="width: 100%;height:auto ;" src="https://media.giphy.com/media/H6ziGeWoLU6sN6KRaV/giphy.gif" alt="comming soon">
+                            <!-- We developed an hp-adaptive process for symmetric positive definite problems. We design a coarsening procedure that <em>clean</em> the mesh of its useless basis functions.-->
+                            <center><img style="width: 400px;height: 400px;" src="grid.gif" alt="grid.gif"></center>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save Changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="HPDDM" tabindex="-1" role="dialog" aria-labelledby="HPDDMLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="HPDDMLabel">Domain Decomposition with Inexact Direct Solvers</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img style="width: 100%;height:auto ;" src="https://media.giphy.com/media/H6ziGeWoLU6sN6KRaV/giphy.gif" alt="comming soon">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save Changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="GKB" tabindex="-1" role="dialog" aria-labelledby="GKBLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="GKBLabel">Generalized Golub-Kahan Bidigonalization</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img style="width: 100%;height:auto ;" src="https://media.giphy.com/media/H6ziGeWoLU6sN6KRaV/giphy.gif" alt="comming soon">
+                            <!-- We describe how we solve saddle point problem for Structural mechanic in collaboration with EDF -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            <!-- <button type="button" class="btn btn-primary">Save Changes</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-4">.col-md-4</div>
+                                <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                                <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    Level 1: .col-sm-9
+                                    <div class="row">
+                                        <div class="col-xs-8 col-sm-6">
+                                            Level 2: .col-xs-8 .col-sm-6
+                                        </div>
+                                        <div class="col-xs-4 col-sm-6">
+                                            Level 2: .col-xs-4 .col-sm-6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
         </section>
 
 
