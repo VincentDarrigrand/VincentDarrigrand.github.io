@@ -40,6 +40,10 @@ a:focus {
                         --shade-7: #474747;
                     }
 
+                    #links {
+                        font-size: 3em;
+                    }
+
                     .footer .ai:hover,
                     .footer .fas:hover,
                     .footer .fab:hover,
@@ -94,8 +98,7 @@ a:focus {
                         max-width: 500px;
                         z-index: 0;
                     }
-
-                    address .container {}
+                    /* address .container {} */
 
                     .footer {
                         background-color: var(--shade-5);
@@ -175,13 +178,13 @@ Date: March 2014
 ------------------------------------------------------------------------------*/
 
                     .clearfix:after,
-                    .container:after {
+                    /* .container:after {
                         content: ".";
                         display: block;
                         visibility: hidden;
                         clear: both;
                         height: 0;
-                    }
+                    } */
                     /* 1.4 Normalized Styles
 ------------------------------------------------------------------------------*/
 
@@ -245,9 +248,9 @@ Date: March 2014
 
                     .btn-cstm {
                         text-align: center;
-                        border: 2px solid var(--shade-6) !important;
-                        background: var(--shade-5) !important;
-                        color: var(--shade-1)!important;
+                        border: 0px solid var(--shade-6) !important;
+                        background: var(--shade-4) !important;
+                        color: var(--shade-0)!important;
                         white-space: normal !important;
                     }
 
@@ -272,9 +275,29 @@ Date: March 2014
                         border-radius: 10px !important;
                     }
 
-                    #Preview>.container {
+                    #Keywords,
+                    #Preview {
+                        width: -moz-max-content;
+                        width: -webkit-max-content;
+                        width: max-content;
+                        /* float: right; */
+                        /* justify-content: center; */
+                    }
+
+                    #research>.container {
                         display: flex;
-                        justify-content: center;
+                        justify-content: space-evenly;
+                        flex-wrap: nowrap;
+                        flex-basis: max-content;
+                        align-items: center;
+                    }
+
+                    @media (max-width: 640px) {
+                        #research>.container {
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            flex-basis: max-content;
+                        }
                     }
 
                     .ir {
@@ -2205,15 +2228,18 @@ jQuery.mmenu themes extension CSS
                         background-color: inherit;
                         position: relative;
                         max-width: 940px;
-                        margin: 0 auto;
-                        padding: 0 10px;
+                        /* margin: 0 auto;
+                        padding: 0 10px; */
+                        /* width: -moz-fit-content;
+                        width: -webkit-fit-content;
+                        width: fit-content; */
                     }
                     /* 2.2 Header
 ------------------------------------------------------------------------------*/
 
                     #header {
                         /* background: rgb(60, 88, 40) no-repeat center center; */
-                        background-size: cover;
+                        /* background-size: cover; */
                         position: relative;
                     }
 
@@ -2296,7 +2322,7 @@ jQuery.mmenu themes extension CSS
                         max-width: 100%;
                         padding-top: 100px;
                         /* transform: translateY(-50%); */
-                        font-family: 'cursive';
+                        /* font-family: 'cursive'; */
                         /* font-size: 0.1em; */
                     }
 
@@ -2492,7 +2518,7 @@ jQuery.mmenu themes extension CSS
                         justify-content: space-around;
                         padding-top: 5px;
                         padding-bottom: 5px;
-                        font-size: 3em;
+                        font-size: 2em;
                     }
                     /* 3. PAGES
 --------------------------------------------------------------------------------
@@ -2550,7 +2576,7 @@ jQuery.mmenu themes extension CSS
 
                     #about .text p {
                         text-align: justify;
-                        max-width: 940px;
+                        /* max-width: 940px; */
                         margin: 0 0 1.3em 0;
                         padding: 0;
                         -moz-break-inside: avoid-column;
@@ -2677,24 +2703,33 @@ jQuery.mmenu themes extension CSS
                         padding-top: 3px;
                         margin-bottom: 0px;
                     }
-
-                    #research {
-                        /* background: rgb(255, 255, 255); */
-                    }
-
-                    #Keywords .text {
-                        /* color: #5a5a5a; */
+                    /* #research { */
+                    /* background: rgb(255, 255, 255); */
+                    /* } */
+                    /* #Keywords ul {
+                        display: block;
+                        width: 80%;
+                        margin: auto;
+                    } */
+                    /* #Keywords .text { */
+                    /* color: #5a5a5a; */
+                    /* display: block;
                         align-content: center;
-                        column-count: 2;
-                        -moz-column-count: 2;
-                        -webkit-column-count: 2;
+                        width: 70%;
+                        margin: auto; */
+                    /* -moz-break-inside: avoid-column;
+                        -webkit-break-inside: avoid-column;
+                        break-inside: avoid-column; */
+                    /* column-count: 1;
+                        -moz-column-count: 1;
+                        -webkit-column-count: 1;
                         column-gap: 5em;
                         -moz-column-gap: 5em;
                         -webkit-column-gap: 5em;
                         -moz-column-fill: balance;
                         -webkit-column-fill: balance;
-                        column-fill: balance;
-                    }
+                        column-fill: balance; */
+                    /* } */
                     /* #research text .p>ul {
         align-content: center;
         column-count: 3;
