@@ -280,6 +280,7 @@ Date: March 2014
                         width: -moz-max-content;
                         width: -webkit-max-content;
                         width: max-content;
+                        padding: 0% 2%;
                         /* float: right; */
                         /* justify-content: center; */
                     }
