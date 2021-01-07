@@ -282,28 +282,35 @@
 
                 </div>
             </div>
-            <div id="bibtex_display"> </div>
+            <div class="container">
+                <div id="bibtex_display"> </div>
+            </div>
 
-            <div class="bibtex_template row">
-                <div class="col-xs-12 col-sm-12">
+            <div class="bibtex_template">
+                <!-- <div class="panel-heading" role="tab"> -->
+
+                <div class="">
+
                     <span class="if year">
-                      <span class="year" style="font-weight: bold; "></span>
+                                <span class="year" style="font-weight: bold; "></span>
                     </span>
                     <span class="if doi">
-      <a class="bibtexVar" href=" https://doi.org/+DOI+" extra="doi">
-        <span class="title "></span>
+                                  <a class="bibtexVar" href=" https://doi.org/+DOI+" extra="doi">
+                                    <span class="title "></span>
                     </a>
                     </span>
                     <span class="if !doi">
-      <a class="bibtexVar" href="+hal+" extra="hal">
-        <span class="title "></span>
+                                    <a class="bibtexVar" href="+hal+" extra="hal">
+                                      <span class="title "></span>
                     </a>
                     </span>
+                </div>
+                <div>
                     <span class="author" conjunction=","><span class="first_initial"></span><span class="von">&nbsp;</span><span class="last">&nbsp;</span></span>
                 </div>
-                <div class="col-xs-12 col-sm-12 details">
+                <div class=" details">
                     <span class="if journal">
-              <em><span class="journal"></span></em>
+                            <em><span class="journal"></span></em>
                     <span class="if volume"><span class="volume"></span></span>
                     <span class="if number">no. <span class="number"></span></span>
                     </span>
@@ -317,38 +324,39 @@
 
 
                     <span class="online">
-                      <span class="if hal">
-              <a class="bibtexVar" href="+hal+" target="_blank" extra="hal">
-                HAL
-                      </a>
-                      </span>
+                            <span class="if hal">
+                            <a class="bibtexVar" href="+hal+" target="_blank" extra="hal">
+                            HAL
+                            </a>
+                            </span>
                     </span>
+                    <span class="if abstract">
+                      <span class="collapse-chevron">
+                      <span class="bibtexVar  collapsed"  id="btnAbstract" data-toggle="collapse" title="View abstract" href="#abstract+BIBTEXKEY+" aria-controls="abstract+BIBTEXKEY+" extra="BIBTEXKEY">
+                      <button class="glyphicon glyphicon-collapse-up btn-cstm btn btn-xs" aria-hidden="true"></button></span>
+                    </span>
+
                 </div>
 
 
                 <div class="online">
-                    <span class="if url">
-            <a class="bibtexVar" href="+url+" target="_blank" extra="url">
-              <span class="url"></span>
-                    </a>
+                    <span class="if url ">
+                            <a class="bibtexVar" href="+url+" target="_blank" extra="url">
+                              <span class="url"></span></a>
                     </span>
-                </div>
-                <div class="if abstract">
-                    <a class="bibtexVar" role="button" data-toggle="collapse" href="#abstract+BIBTEXKEY+" aria-expanded="false" aria-controls="abstract+BIBTEXKEY+" extra="BIBTEXKEY">
-                    [abstract]
-                  </a>
+
                 </div>
 
-                <div class="clearfix hidden-sm-up"></div>
-                <div class="col-sm-1"></div>
-                <div class="col-xs-12 col-sm-10 bibtexVar collapse" id="abstract+BIBTEXKEY+" extra="BIBTEXKEY">
+                <div class="bibtexVar collapse" role="tabpanel" id="abstract+BIBTEXKEY+" extra="BIBTEXKEY">
                     <div class="well">
                         <span class="abstract"></span>
                     </div>
                 </div>
-                <div class="col-sm-1"></div>
             </div>
+
+
         </section>
+
 
         <section class="unityblock" id="contact">
             <h2>Contact</h2>

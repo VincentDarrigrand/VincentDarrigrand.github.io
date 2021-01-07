@@ -88,7 +88,20 @@ a:focus {
                     .well {
                         background: var(--shade-0) !important;
                         /* background: white; */
-                        color: var(--shade-7)
+                        color: var(--shade-7);
+                        width: 80%;
+                    }
+
+                    @media all and (max-width: 640px) {
+                        #well {
+                            width: 100% !important;
+                        }
+                    }
+
+                    .panel-heading {
+                        color: var(--shade-7);
+                        background-color: var(--shade-1);
+                        border-color: var(--shade-7);
                     }
 
                     #contact {
@@ -117,6 +130,14 @@ a:focus {
 
                     iframe .container {
                         max-width: 500px;
+                    }
+
+                    .collapse-chevron .glyphicon {
+                        transition: .3s transform ease-in-out;
+                    }
+
+                    .collapse-chevron .collapsed .glyphicon {
+                        transform: rotate(-180deg);
                     }
                     /*******************************************************************************
 
@@ -242,11 +263,16 @@ Date: March 2014
                         margin-left: auto;
                     }
 
-                    h2 {
-                        /*font: 3em/2em 'Halant', serif;*/
-                        /* text-align: center; */
-                        /* padding-top: 25pt; */
+                    h2,
+                    h3 {
                         padding-bottom: 25pt;
+                    }
+
+                    #btnAbstract {
+                        display: block;
+                        position: absolute;
+                        right: 0em;
+                        bottom: 0em;
                     }
 
                     .btn-cstm {
@@ -263,7 +289,7 @@ Date: March 2014
                         color: var(--shade-0)!important;
                     }
 
-                    @media (max-width: 640px) {
+                    @media all and (max-width: 640px) {
                         #btn-cstm {
                             width: 50%;
                         }
@@ -2636,122 +2662,38 @@ jQuery.mmenu themes extension CSS
 #cv .row {
     padding-bottom: 35px;
 } */
-
-                    #publications {
-                        /* background: #EEE; */
-                        /* padding-bottom: 50px; */
-                    }
-
-                    #articles {
-                        /* background: #EEE; */
-                        /* padding-bottom: 5px; */
-                    }
-
-                    #thesis {
-                        /* background: #EEE; */
-                        /* padding-bottom: 5px; */
-                    }
-
-                    #Proceedings {
-                        /* background: #EEE; */
-                        /* padding-bottom: 5px; */
-                    }
-
-                    #articles h3,
+                    /* #articles h3,
                     #thesis h3,
-                    #Proceedings h3 {
+                    #Proceedings*/
+                    /*
+                    h3 {
                         margin-bottom: 20px;
-                        margin-top: 0px;
-                    }
-
-                    #articles h4,
-                    #thesis h4,
-                    #Proceedings h4 {
-                        margin: 0px;
-                        color: #337ab7;
-                    }
+                        margin-top: 0px !important;
+                    } */
 
                     .entry-list {
                         counter-reset: list;
-                        padding-left: 40px;
+                        /* padding-left: 40px; */
                     }
 
-                    .entry-list .title:before {
+                    .entry-list .bibtexentry::before {
                         counter-increment: list;
                         content: "[" counter(list) "]";
                         display: block;
                         position: absolute;
-                        right: 100%;
+                        left: -2em;
                     }
 
-                    #articles .row,
-                    #Proceedings .row {
-                        padding-bottom: 15px;
-                        margin-top: 12px;
-                        /* max-width: 940px;
-    align-content: center; */
+                    .bibtexentry {
+                        padding-bottom: 1em;
+                        position: relative;
                     }
+                    /*
 
-                    #articles .date,
-                    #Proceedings .date {
-                        padding-left: 0px;
-                        /* font-weight: bold; */
-                    }
 
-                    #articles .online,
-                    #Proceedings .online {
-                        padding-left: 0px;
-                        padding-top: 0px;
-                    }
 
-                    #articles .author,
-                    #Proceedings .author {
-                        padding-top: 3px;
-                        margin-bottom: 0px;
-                    }
-                    /* #research { */
-                    /* background: rgb(255, 255, 255); */
-                    /* } */
-                    /* #Keywords ul {
-                        display: block;
-                        width: 80%;
-                        margin: auto;
-                    } */
-                    /* #Keywords .text { */
-                    /* color: #5a5a5a; */
-                    /* display: block;
-                        align-content: center;
-                        width: 70%;
-                        margin: auto; */
-                    /* -moz-break-inside: avoid-column;
-                        -webkit-break-inside: avoid-column;
-                        break-inside: avoid-column; */
-                    /* column-count: 1;
-                        -moz-column-count: 1;
-                        -webkit-column-count: 1;
-                        column-gap: 5em;
-                        -moz-column-gap: 5em;
-                        -webkit-column-gap: 5em;
-                        -moz-column-fill: balance;
-                        -webkit-column-fill: balance;
-                        column-fill: balance; */
-                    /* } */
-                    /* #research text .p>ul {
-        align-content: center;
-        column-count: 3;
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-gap: 5em;
-        -moz-column-gap: 5em;
-        -webkit-column-gap: 5em;
-        -moz-column-fill: balance;
-        -webkit-column-fill: balance;
-        column-fill: balance;
-    } */
 
-                    #personal {
-                        background: #6EBBA0
-                    }
+                     */
 
                     .banner .dots {
                         position: absolute;
@@ -2797,22 +2739,21 @@ jQuery.mmenu themes extension CSS
 }
 }
 */
-
-                    @media screen and (max-width: 768px) {
-                        h1 {
-                            /*font: 3.6em/1.4em 'Halant', serif;*/
-                        }
-                        #testimonials h2 {
-                            /*font: 3em/2em 'Halant', serif;*/
-                        }
-                        /* #about .text {
+                    /* @media screen and (max-width: 768px) {
+                        h1 { */
+                    /*font: 3.6em/1.4em 'Halant', serif;*/
+                    /* } */
+                    /* #testimonials h2 { */
+                    /*font: 3em/2em 'Halant', serif;*/
+                    /* } */
+                    /* #about .text {
                             margin-left: 10px;
                             margin-right: 10px;
                             column-count: 1;
                             -moz-column-count: 1;
                             -webkit-column-count: 1;
                         } */
-                        #past dt,
+                    /* #past dt,
                         #past dd {
                             margin-left: 10px;
                             margin-right: 10px;
@@ -2828,15 +2769,13 @@ jQuery.mmenu themes extension CSS
                         aside {
                             font-size: 4em;
                         }
-                    }
-
-                    @media screen and (max-width: 600px) {
+                    } */
+                    /* @media screen and (max-width: 600px) {
                         aside {
                             font-size: 3em;
                         }
-                    }
-
-                    @media screen and (max-width: 480px) {
+                    } */
+                    /* @media screen and (max-width: 480px) {
                         #clients li {
                             margin: 15px 0 35px;
                             float: none;
@@ -2845,68 +2784,14 @@ jQuery.mmenu themes extension CSS
                         aside {
                             font-size: 2em;
                         }
-                    }
-
-                    @media screen and (max-width: 340px) {}
+                    } */
+                    /* @media screen and (max-width: 340px) {} */
                     /* 5. PRINT
 --------------------------------------------------------------------------------
 ==============================================================================*/
-
-                    @media print {
-                        body {
-                            /*font: normal normal 12pt/1.5em "Times New Roman", Times, serif;*/
-                        }
-                        a[href]:after {
-                            content: " (" attr(href) ") ";
-                            font-size: 90%;
-                        }
-                        a[href^="/"]:after {
-                            content: " (http://domain.com" attr(href) ") ";
-                        }
-                        .accessibility-nav,
-                        .hide {
-                            display: none !important;
-                        }
-                    }
-                    /* Nominations */
-
-                    .opl {
-                        position: fixed;
-                        top: 100px;
-                        left: 0px;
-                        z-index: 99999;
-                    }
-
-                    .opl a {
-                        width: 73px;
-                        height: 56px;
-                        text-indent: -9999px;
-                        display: block;
-                        background: url('https://s3.amazonaws.com/onepagelove/one-page-love-award-left.png') no-repeat;
-                    }
-
-                    .sc {
-                        position: fixed;
-                        top: 150px;
-                        left: 0px;
-                        z-index: 99999;
-                    }
-
-                    .sc a {
-                        width: 73px;
-                        height: 56px;
-                        text-indent: -9999px;
-                        display: block;
-                        background: url('http://starscontest.com/winner-ribbon.png') no-repeat;
-                    }
-                    /* #footer a {
-                    text-decoration: none;
-                    color: #999;
-                }
-
-                #footer a:hover {
-                    color: fff;
-                } */
+                    /* #footer a:hover {
+                        color: fff;
+                    } */
                     /* Animations */
 
                     @keyframes arrows {
