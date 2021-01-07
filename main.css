@@ -224,26 +224,39 @@ Date: March 2014
                         /* is width and height divided by two */
                     }
 
-                    h1 {
-                        /* font: 4.3em/2em 'Halant', serif; */
-                        text-align: center;
+                    h1,
+                    #header h1,
+                    h2,
+                    h3,
+                    h4 {
+                        width: -moz-max-content;
+                        width: -webkit-max-content;
+                        width: max-content;
+                        display: block;
+                        margin-right: auto;
+                        margin-left: auto;
                     }
+                    /* @media (max-width: 640px) {
+                        #btn-cstm {
+                            width: min-content;
+                        }
+                    } */
 
                     h2 {
                         /*font: 3em/2em 'Halant', serif;*/
-                        text-align: center;
+                        /* text-align: center; */
                         padding-top: 25pt;
                         padding-bottom: 25pt;
                     }
 
                     h3 {
                         /*font: 3em/2em 'Halant', serif;*/
-                        text-align: center;
+                        /* text-align: center; */
                     }
 
                     h4 {
                         /*font: 3em/2em 'Halant', serif;*/
-                        text-align: center;
+                        /* text-align: center; */
                     }
 
                     .btn-cstm {
@@ -2317,35 +2330,32 @@ jQuery.mmenu themes extension CSS
                     }
 
                     #header #intro {
-                        position: relative;
-                        top: 40%;
-                        text-align: center;
-                        max-width: 100%;
-                        padding-top: 100px;
+                        /* position: fixed; */
+                        /* top: 50pt; */
+                        /* top: 40%; */
+                        /* text-align: center; */
+                        /* max-width: 100%; */
+                        padding-top: 80px;
+                        padding-bottom: 5px;
                         /* transform: translateY(-50%); */
                         /* font-family: 'cursive'; */
                         /* font-size: 0.1em; */
                     }
-
-                    #header h1,
+                    /* #header h1,
                     #header h2,
                     #header p {
-                        text-align: center;
-                        /* color: #FFF; */
                         font-weight: 400;
-                    }
-
-                    #header h1 {
-                        margin-bottom: 0px;
-                        line-height: 1em;
-                        font-size: 4em;
-                    }
-
-                    #header h2 {
-                        /*font: 300 30px 'Exo 2', sans-serif;*/
+                    } */
+                    /* h1 { */
+                    /* padding-bottom: 0px; */
+                    /*line-height: 1em; */
+                    /* font-size: 4em; */
+                    /* flex-basis: min-content; */
+                    /* } */
+                    /* #header h2 {
                         margin: 0 0 80px;
                         letter-spacing: 1px;
-                    }
+                    } */
 
                     #scroll-down {
                         position: absolute;
@@ -2490,12 +2500,11 @@ jQuery.mmenu themes extension CSS
                         position: relative;
                         padding-bottom: 75px;
                     }
-
-                    main h1 {
+                    /* main h1 {
                         font-size: 3.6em;
                         letter-spacing: 1px;
                         margin: 0 0 30px;
-                    }
+                    } */
                     /* 2.6 Footer
 ------------------------------------------------------------------------------*/
                     /* #contact {
