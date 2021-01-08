@@ -51,6 +51,9 @@
                 <a class=" navbar-brand img-responsive" rel="home" href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/ " title="IRIT - APO team" target="_blank">
                     <img src="Logo_IRIT.svg" alt="Irit Logo">
                 </a>
+                <!-- <a class="navbar-brand img-responsive center-block" rel="home" href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/ " title="IRIT - APO team" target="_blank">
+                        <img src="logo_inp-enseeiht.png" alt="enseeiht Logo">
+                    </a> -->
             </div>
             <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon "></span>
@@ -73,38 +76,9 @@
                 </ul>
             </div>
 
-            <!-- <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topnavbar" aria-expanded="false" aria-controls="topnavbar">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand img-responsive center-block" rel="home" href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/ " title="IRIT - APO team" target="_blank">
-                        <img src="LOGO_CNRS_2019_BLANC.gif" alt="CNRS Logo">
-                    </a>
-                    <a class="navbar-brand img-responsive center-block" rel="home" href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/ " title="IRIT - APO team" target="_blank">
-                        <img src="Logo_IRIT.svg" alt="Irit Logo">
-                    </a>
 
-                </div>
-                <div id="topnavbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#intro">About</a></li>
-                        <li><a href="cv_Vincent_Darrigrand.pdf">CV</a></li>
-                        <li><a href="#research">Research</a></li>
-
-                        <li><a href="#publications">Publications</a></li>
-
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div> -->
         </nav>
-        <!-- <a class="navbar-brand img-responsive center-block" rel="home" href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/ " title="IRIT - APO team" target="_blank">
-                        <img src="logo_inp-enseeiht.png" alt="Irit Logo">
-                    </a> -->
+
 
         <div id="intro">
             <h1>Vincent Darrigrand</h1>
@@ -178,11 +152,13 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <h5>Popover in a modal</h5>
+                            This research aims to produce error indicators for the pre-asymptotical regime of highly unstable problems such as the Helmholtz equation and the convection-dominated diffusion problem in the context of GOA. We refer to
+                            <a href="https://doi.org/10.1016/j.camwa.2015.03.006">this paper</a>, <a href="https://doi.org/10.1016/j.procs.2017.05.168"> this one</a>, and <a href="https://doi.org/10.1002/nme.5601">this one</a>. I build my <a href="http://www.theses.fr/2017PAUU3011">Ph.D. Thesis</a>                            with those results.
 
+                            <h5>More details coming soon</h5>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-cstm" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -197,15 +173,53 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <h5>Popover in a modal</h5>
-                            <img style="width: 400px;height: 400px;" src="grid.gif" alt="grid.gif">
+                            <p>
+                                We implement our method on top of <a href="https://doi.org/10.1007/s00466-014-1118-x">Zander et al.</a> hierarchical data-structure. Our main contribution resides in the adaptive strategy. For a given mesh, we aim at returning
+                                the coarsest discretization possible without overly increasing the error.
+                            </p>
+                            <p>
+                                In <a href="https://doi.org/10.1016/j.finel.2020.103424">this paper</a>, we describe the algorithm and apply it to Symmetric Positive Definite problems (manufactured solutions for a Laplace equation). The adaptive algorithm
+                                is the following:</p>
+                            <ol>
+                                <li>Start with an initial coarse mesh</li>
+                                <li>Refine it (user-defined refinement, eg. global <em>h</em>-refinements and/or global <em>p</em>-refinements)</li>
+                                <li>Perform the coarsening step</li>
+                                <li>Return to step 1 until the mesh is fine enough and the error below the threshold</li>
+                            </ol>
+
+                            The unrefinement step proceeds as follows:
+                            <ol>
+                                <li>Compute the solution</li>
+                                <li>Identify the removable basis functions</li>
+                                <li>Evaluate their contribution</li>
+                                <li>Remove the least contributing ones</li>
+                            </ol>
+
+                            We illustrate the process in the following animation:
+
+                            <figure class="figure d-block mx-auto">
+                                <img class="d-block mx-auto figure-img img-fluid " src="grid.gif" alt="grid.gif" id="FighrefUnref">
+                                <figcaption class="figure-caption text-center"> <em>h</em>-adaptive process for a shock problem. <br> Observe how the few last steps remove pre-asymptotical mistakes on the bottom left corner. </figcaption>
+                            </figure>
+
+                            <p> To build the <em>hp</em>-coarsening step, we need a criteria to know if we should proceed to <em>h</em>- or <em>p</em>-unrefinements. For a given element,</p>
+                            <ul>
+                                <li>
+                                    <p> If its contribution is small compare to the average of contributions then proceed to <em>p</em>-unrefinement,</p>
+                                </li>
+                                <li>
+                                    <p>if the contribution of its siblings are also small, then perform an <em>h</em>-unrefinement instead.</p>
+                                </li>
+                            </ul>
+
+
                             <!-- <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p> -->
                             <!-- <hr>
                             <h5>Tooltips in a modal</h5>
                             <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p> -->
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-cstm" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -221,11 +235,10 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
                         <div class="modal-body">
-                            <!-- <img style="width: 100%;height:auto ;" src="commingsoon.gif" alt="comming soon"> -->
-                            <!-- We describe how we solve saddle point problem for Structural mechanic in collaboration with EDF -->
+                            Description coming soon
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-cstm" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
@@ -240,11 +253,11 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                            <h5>Popover in a modal</h5>
+                            Description coming soon
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-cstm" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
 
                         </div>
                     </div>
@@ -255,7 +268,7 @@
 
 
         <section class="unityblock" id="publications">
-            <h2>Publications</h2>
+            <h2 title="Please Reload if the publication list does not display">Publications</h2>
 
             <div class="bibtex_structure">
                 <div class="sections bibtextypekey">
