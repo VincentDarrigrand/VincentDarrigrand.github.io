@@ -132,11 +132,24 @@ section section {
 }
 
 .collapse-chevron .bi {
-    transition: .3s transform ease-in-out;
+    transition: .5s transform ease-in-out;
 }
 
 .collapse-chevron .collapsed .bi {
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-0.5turn);
+    /* -webkit-transform-origin: -0.5em -0.5em; */
+    transform: rotate(-0.5turn);
+    /* transform-origin: center; */
+}
+
+.btn-Abstract {
+    display: inline-block;
+    position: absolute;
+    left: -1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    background: transparent !important;
+    color: var(--shade-4)!important;
 }
 
 
@@ -223,16 +236,6 @@ h4 {
 h2,
 h3 {
     padding-bottom: 1.5rem;
-}
-
-.btn-Abstract {
-    display: block;
-    position: absolute;
-    right: 0rem;
-    bottom: 0rem;
-    font-size: 2rem;
-    background: transparent !important;
-    color: var(--shade-4)!important;
 }
 
 .btn-Abstract:hover,
@@ -402,7 +405,7 @@ p {
     content: "[" counter(list) "]";
     display: block;
     position: absolute;
-    left: -2rem;
+    left: -1.5rem;
 }
 
 .bibtexentry {
