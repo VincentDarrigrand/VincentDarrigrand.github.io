@@ -101,7 +101,8 @@ section section {
 
 #contact {
     /* background-color: var(--shade-2); */
-    padding-bottom: 3.5rem;
+    /* padding-bottom: 15rem; */
+    padding-bottom: 40vh;
 }
 
 #mapid {
