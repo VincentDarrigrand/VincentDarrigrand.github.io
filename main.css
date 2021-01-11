@@ -36,12 +36,12 @@ section section {
     color: var(--shade-6);
 }
 
-.unityblock:nth-of-type(2n+1) {
-    background-color: var(--shade-0);
+.unityblock:nth-of-type(2n) {
+    background-color: var(--shade-2);
 }
 
-.unityblock:nth-of-type(5n+2) {
-    background-color: var(--shade-2);
+.unityblock:nth-of-type(2n+1) {
+    background-color: var(--shade-0);
 }
 
 #header .navbar {
@@ -100,7 +100,7 @@ section section {
 }
 
 #contact {
-    background-color: var(--shade-2);
+    /* background-color: var(--shade-2); */
     padding-bottom: 3.5rem;
 }
 
@@ -290,6 +290,11 @@ h3 {
 address {
     width: 100%!important;
     max-width: var(--breakpoint-md);
+}
+
+embed {
+    width: 100%;
+    min-height: 60vh;
 }
 
 #Keywords,
