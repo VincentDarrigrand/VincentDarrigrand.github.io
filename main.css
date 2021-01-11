@@ -294,7 +294,7 @@ address {
 
 embed {
     width: 100%;
-    min-height: 60vh;
+    height: 60vh;
 }
 
 #Keywords,
