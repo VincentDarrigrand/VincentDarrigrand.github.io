@@ -21,7 +21,7 @@ body {
 }
 
 h1,
-#header h1,
+header h1,
 h2,
 h3,
 h4 {
@@ -70,11 +70,12 @@ p {
     --shade-4: #698769;
     --shade-5: #162716;
     --shade-6: #000000;
+    --txt-color: #000000;
     --shade-7: #474747;
 }
 
 .unityblock {
-    color: var(--shade-6);
+    color: var(--txt-color);
 }
 
 .unityblock:nth-of-type(2n) {
@@ -85,7 +86,7 @@ p {
     background-color: var(--shade-0);
 }
 
-#header .navbar {
+header .navbar {
     background-color: var(--shade-5);
 }
 
@@ -93,21 +94,23 @@ p {
     color: var(--shade-0);
 }
 
-#header .navbar-nav a:hover {
+footer a,
+header .navbar-nav a {
     color: var(--shade-0);
+}
+
+header a:hover,
+footer a:hover {
+    color: var(--shade-1);
     /* background-color: transparent; */
 }
 
-#header .navbar-nav li.active a {
+header .navbar-nav li.active a {
     color: var(--shade-2);
     /* background-color: transparent; */
 }
 
-#header {
-    background-color: var(--shade-4);
-}
-
-#header h1 {
+header h1 {
     color: var(--shade-1);
 }
 
@@ -126,27 +129,9 @@ p {
     color: var(--shade-0);
 }
 
-.panel-heading {
-    color: var(--shade-7);
-    background-color: var(--shade-1);
-    border-color: var(--shade-7);
-}
-
-.footer {
-    background-color: var(--shade-5);
-}
-
-.footer .ai,
-.footer .fas,
-.footer .fab {
-    color: var(--shade-1);
-}
-
-.footer .ai:hover,
-.footer .fas:hover,
-.footer .fab:hover,
-main a>img:hover {
-    color: var(--shade-4);
+header,
+footer {
+    background-color: var(--shade-4);
 }
 
 .btn-Abstract {
@@ -179,36 +164,43 @@ main a>img:hover {
 
 
 /*
-3. Contents
+3. Header & footer
  */
 
-
-/*
-3.1. Header
- */
-
-#header .navbar {
+footer,
+header .navbar {
     opacity: 0.75;
 }
 
-#header a img {
+header a img {
     height: 2rem;
     width: auto;
 }
 
-#header .navbar-nav li {
+header .navbar-nav li {
     text-transform: uppercase;
     font-size: 1.1rem;
 }
 
-#header #intro {
+header #intro {
     padding-top: 5rem;
     padding-bottom: 0.1rem;
 }
 
+footer {
+    display: flex !important;
+    justify-content: space-around !important;
+    font-size: 2rem;
+}
+
 
 /*
-3.2. Bio
+4. Contents
+ */
+
+
+/*
+4.1. Bio
 */
 
 #about img {
@@ -222,7 +214,7 @@ main a>img:hover {
 
 
 /*
-3.3. Research
+4.2. Research
 */
 
 #Keywords,
@@ -261,7 +253,7 @@ main a>img:hover {
 
 
 /*
-3.4. Publication
+4.3. Publication
  */
 
 #bibtex_display {
@@ -318,7 +310,7 @@ main a>img:hover {
 
 
 /*
-3.5. Contact
+4.4. Contact
 */
 
 address {
@@ -345,20 +337,4 @@ address {
 #contact-form textarea {
     width: 100%;
     max-width: var(--breakpoint-sm);
-}
-
-
-/*
-3.6. Footer
-*/
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0.75;
-    display: flex;
-    justify-content: space-around;
-    font-size: 2rem;
 }
