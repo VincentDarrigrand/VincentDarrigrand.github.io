@@ -319,11 +319,11 @@ embed {
     max-width: var(--breakpoint-sm);
 }
 
-
-/* #publications,
-#contact {
-    height: 100vh;
-} */
+#bibtex_display {
+    height: 90vh;
+    overflow: auto;
+    padding: 0 2rem;
+}
 
 @media (max-width:767.98px) {
     #research>.container {
