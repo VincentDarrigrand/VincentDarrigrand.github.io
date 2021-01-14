@@ -42,7 +42,7 @@
 
 
     <header id="header" role="banner">
-        <nav class="navbar navbar-expand-md fixed-top" role="navigation">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark" role="navigation">
             <div class="">
 
                 <a class="navbar-brand img-responsive" rel="home" href="https://www.irit.fr/departement/calcul-intensif-simulation-optimisation/equipe-apo/ " title="IRIT - APO team" target="_blank">
@@ -58,6 +58,7 @@
             </div>
             <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon "></span>
+              <!-- <i class="bi bi-three-dots-vertical"></i> -->
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -466,6 +467,8 @@
         const btn = document.querySelector(".btn-toggle");
         const CNRSlogoEl = document.getElementById('CNRSlogo');
         const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
+        // const navbr = document.getElementById('header');
+        const navbr = document.querySelector('.navbar');
 
         // const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
 
@@ -479,12 +482,15 @@
         // }
 
         const setCNRSlogo = isDark =>
-            (CNRSlogoEl.src = `img/LOGO_CNRS_2019_${isDark ? 'NOIR' : 'BLANC'}.gif`);
+            (CNRSlogoEl.src = `img/LOGO_CNRS_2019_${isDark ? 'BLANC' : 'NOIR'}.gif`);
         const setcolorscheme = isDark =>
             (`${isDark ? document.body.classList.toggle("dark-theme") : document.body.classList.toggle("light-theme")}`);
+        const setcolorschemeNav = isDark =>
+            (`${isDark ? navbr.classList.add("navbar-light") : navbr.classList.add("navbar-dark")}`);
 
-        setCNRSlogo(matchDark.matches);
+        // setCNRSlogo(matchDark.matches);
         setcolorscheme(matchDark.matches);
+        // setcolorschemeNav(matchDark.matches);
 
         matchDark.addListener(e => {
             setCNRSlogo(e.matches);

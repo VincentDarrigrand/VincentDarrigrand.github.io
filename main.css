@@ -63,7 +63,12 @@ p {
 */
 
 :root {
-    --shade-0: white;
+    --light-blue-link: #007bff;
+    --dark-blue-link: #2424b1;
+    --bg-dark: #666666;
+    --bg-dark-2: #2e3f2e;
+    --bg-light: #EEF1ED;
+    --shade-0: #EEF1ED;
     --shade-1: #E2E4C8;
     --shade-2: #D2D6A9;
     --shade-3: #879B5F;
@@ -83,48 +88,29 @@ body.light-theme {
     --icon-color: var(--shade-5);
     /* btn color */
     --btn-color: var(--shade-0);
-    --btn-bkg-color: var(--shade-3);
-    --btn-2-color: var(--shade-4);
+    --btn-bkg-color: var(--shade-4);
+    --btn-2-color: var(--shade-5);
     --btn-2-bkg-color: var(--shade-1);
+    --link-color: var(--light-blue-link);
 }
 
 body.dark-theme {
     --text-color: var(--shade-0);
     --text-color-contrast: var(--shade-6);
-    --bkg-color-1: var(--shade-5);
-    --bkg-color-2: var(--shade-4);
-    --header-color: var(--shade-2);
-    --navbar-color: var(--shade-1);
-}
-
-
-/* @media (prefers-color-scheme: dark) {
-    defaults to dark theme
-
-
-}*/
-
-
-/* body {
-    --text-color: var(--shade-0);
-    --text-color-contrast: var(--shade-6);
-    --bkg-color-1: var(--shade-5);
-    --bkg-color-2: var(--shade-4);
-    --header-color: var(--shade-2);
-    --navbar-color: var(--shade-1);
-}
-
-body.light-theme {
-    --text-color: var(--shade-6);
-    --text-color-contrast: var(--shade-0);
-    --bkg-color-1: var(--shade-0);
-    --bkg-color-2: var(--shade-2);
+    --bkg-color-1: var(--bg-dark);
+    --bkg-color-2: var(--bg-dark-2);
     --header-color: var(--shade-4);
     --navbar-color: var(--shade-5);
-} */
+    --btn-color: var(--shade-0);
+    --btn-bkg-color: var(--shade-4);
+    --btn-2-color: var(--shade-5);
+    --btn-2-bkg-color: var(--shade-1);
+    --link-color: var(--dark-blue-link);
+}
 
-
-/* [data-theme="color-1"] {} */
+main a {
+    color: var(--link-color);
+}
 
 .unityblock {
     color: var(--text-color);
@@ -147,47 +133,52 @@ header {
     background-color: var(--header-color);
 }
 
-body .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-body.light-theme .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
 footer a,
+header .navbar-dark .navbar-nav .nav-link,
 header .navbar-nav a {
-    color: var(--text-color-contrast);
+    color: var(--text-color);
 }
 
 header a:hover,
+header .navbar-dark .navbar-nav .nav-link.hover,
 footer a:hover {
-    color: var(--shade-1);
+    opacity: 0.7;
+    color: var(--text-color);
+    /* color: var(--shade-1); */
     /* background-color: transparent; */
 }
 
-header .navbar-nav li.active a {
-    color: var(--shade-2);
+header .navbar-dark .navbar-nav .nav-link.active {
+    color: var(--text-color);
+    opacity: 0.7;
     /* background-color: transparent; */
 }
 
 header h1 {
-    color: var(--shade-1);
+    color: var(--text-color);
 }
 
 .card-body {
-    background: var(--shade-0) !important;
-    color: var(--shade-7);
+    /* background: var(--shade-0) !important; */
+    background: inherit !important;
+    /* color: var(--shade-7); */
 }
 
 .modal-body {
-    background: var(--shade-0);
+    background: var(--bkg-color-1);
 }
 
 .modal-footer,
 .modal-header {
-    background: var(--shade-4);
-    color: var(--shade-0);
+    background: var(--header-color);
+    /* color: var(--shade-0); */
+}
+
+textarea,
+input {
+    background: var(--bkg-color-1);
+    color: var(--text-color);
+    border: none;
 }
 
 
@@ -198,11 +189,11 @@ header h1 {
     color: var(--btn-2-color)!important;
 }
 
-.btn-Abstract:hover,
-.btn-Abstract:active {
+.btn-Abstract:hover {
     /* background: var(--shade-0) !important; */
-    background: transparent !important;
-    color: var(--shade-3)!important;
+    background: inherit !important;
+    color: var(--btn-2-color)!important;
+    opacity: 0.7;
 }
 
 .btn-cstm {
@@ -210,10 +201,10 @@ header h1 {
     color: var(--btn-color)!important;
 }
 
-.btn-cstm:hover,
-.btn-cstm:active {
-    background: var(--shade-3) !important;
+.btn-cstm:hover {
+    background: inherit !important;
     color: var(--btn-color)!important;
+    opacity: 0.7;
 }
 
 .btn-modal {
@@ -396,4 +387,14 @@ address {
 #contact-form textarea {
     width: 100%;
     max-width: var(--breakpoint-sm);
+}
+
+#contact-form textarea,
+#contact-form input {
+    margin: 0.1rem 0;
+    border: none;
+}
+
+#contact-form .pull-tab {
+    color: var(--text-color);
 }
