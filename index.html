@@ -7,7 +7,8 @@
     />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <!-- <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache" />  -->
 
     <link rel="icon" type="image/png" href="img/favicon.png" />
 
@@ -261,7 +262,20 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
                         <div class="modal-body">
-                            Description coming soon
+                            <p>We are interested in saddle-point problems (linear elastic with MPC) from structural mechanics and provided by EDF. Historically, code_aster employs the double lagrangian approach to ensure that the saddle-point problem is
+                                SPD to use Cholesky factorization. However, this approach notably increased the system’s size, making it even more difficult to resolve via direct solvers. Hence, we need to find an adapted iterative solver for this situation.
+                                The idea proposed here explores the use of the generalized Golub-Kahan Bidiagonalization (GKB) iterative method on the augmented Lagrangian system to solve those problems.
+                            </p>
+
+                            <p>The significant contribution is proof that for a sufficiently large augmentation parameter, the number of iterations of the GKB algorithm should be independent of the problem size. However, since we rely on eigenvalues' computation
+                                to determine the parameter values, we have to proceed experimentally.</p>
+
+                            <p> To validate this result, we constructed a systematic study on test cases by increasing the difficulty both in terms of problem size and conditioning. We showed that, for with the parameter set to the 1-norm of the (1,1)-block,
+                                we obtain satisfactory convergence. The most challenging problem is the discretization of a containment building. We showed that even for this realistic industrial problem, we could achieve the convergence of the GKB within
+                                a few iterations. Finally, we showed that GKB scalability is limited by the (1,1)-block solver scalability.
+                            </p>
+
+                            <p>This results is published in <a href="https://doi.org/10.1186/s40323-020-00181-2">this article</a> </p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
@@ -279,8 +293,14 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                            Description coming soon
+                            <p>In the framework of a post-doc within the European Project <a href="https://www.eocoe.eu/">EoCoE II</a>, we are interested in linear elastic problems encountered in applications such as wind farms where structural mechanics
+                                are coupled with fluid dynamics. The need for scalable solvers is critical. I am investigating the use of Domain Decomposition Methods (DDM) coupled with <a href="http://mumps.enseeiht.fr">MUMPS</a> solver as preconditioner
+                                for iterative methods.</p>
+                            <!-- A DDM is a technique that splits the computational domain into several independent (overlapping) subdomains. Each subdomain computes its part of the solution. A coarse problem is used to coordinate the subdomain iterative process. By essence, these methods are extremely scalable. -->
 
+                            We use <a href="https://freefem.org/">FREEFEM++</a> interfaced with <a href="https://www.mcs.anl.gov/petsc/">PETSc</a> to call <a href="https://github.com/hpddm/hpddm">HPDDM</a>, which, in turn, uses <a href="https://slepc.upv.es/">SLEPc</a>                            to solve eigenvalue problems to build the coarse operator. HPDDM needs to perform several linear solves. The resolutions occur at three levels: First, on the fine grid, we solve the problem on a portion of the initial mesh
+                            where a single process is running independently. Then, still, on the fine grid, an eigenvalue solve is performed. Finally, we can build a matrix on the coarse grid based on the eigenvectors and eigenvalues on each subdomain.
+                            We chose to use MUMPS solver for all these three linear resolutions to investigate the use of the recent Block-Low Rank (BLR) method to improve the scalability of the overall solver.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
@@ -443,7 +463,8 @@
     <!--                   Scripts               -->
     <!-- bibtex-js -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script> -->
-    <script type="text/javascript" src="bibtex_js.js"></script>
+    <!-- <script type="text/javascript" src="bibtex_js.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script>
 
     <!-- font awsome -->
     <script src="https://kit.fontawesome.com/f0f2f8d409.js" crossorigin="anonymous"></script>
