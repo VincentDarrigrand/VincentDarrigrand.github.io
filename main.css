@@ -212,6 +212,10 @@ footer {
     margin-top: 1rem;
 }
 
+#about .container {
+    padding: 0 5rem;
+}
+
 
 /*
 4.2. Research

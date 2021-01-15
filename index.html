@@ -98,8 +98,10 @@
             <div class="container">
                 <p>
                     I got my international Ph.D. degree in mathematics in September 2017 from the University of the Basque Country (UPV-EHU, Spain) and the University of Pau (UPPA, France) under the supervision of Prof. David Pardo (UPV-EHU) and Prof. Hélène Barucq (UPPA).
-                    I was awarded the best possible distinction: Cum Laude. The thesis thematic was on error representations for mesh p-adaptivity for Goal-Oriented Problems applied to Helmholtz problems. Until June 2019, I worked as a postdoctoral researcher
-                    in Bilbao with Prof. David Pardo in the
+                    I was awarded the best possible distinction: Cum Laude. The thesis thematic was on error representations for mesh p-adaptivity for Goal-Oriented Problems applied to Helmholtz problems.
+                </p>
+                <p>
+                    Until June 2019, I worked as a postdoctoral researcher in Bilbao with Prof. David Pardo in the
                     <a href="https://www.mathmode.science/">MathMode project</a>. We have developed a new hp-adaptive process. I continued my postdoctoral training in Cerfacs, Toulouse, until June 2020. I worked with Dr. Carola Kruse and members of the
                     <a href="https://cerfacs.fr/parallels-algorithms/">Algo Team</a>. We focused on Structural Mechanics problems provided by our collaborator Dr. Nicolas Tardieu at the French energy producer EDF. I am currently a Post-doc researcher
                     at
@@ -294,8 +296,8 @@
                         </div>
                         <div class="modal-body">
                             <p>In the framework of a post-doc within the European Project <a href="https://www.eocoe.eu/">EoCoE II</a>, we are interested in linear elastic problems encountered in applications such as wind farms where structural mechanics
-                                are coupled with fluid dynamics. The need for scalable solvers is critical. I am investigating the use of Domain Decomposition Methods (DDM) coupled with <a href="http://mumps.enseeiht.fr">MUMPS</a> solver as preconditioner
-                                for iterative methods.</p>
+                                are coupled with fluid dynamics. The need for scalable solvers is critical. I am investigating the use of Domain Decomposition Methods (DDM) coupled with <a href="http://mumps.enseeiht.fr">MUMPS</a> solver with the Block-Low
+                                Rank (BLR) feature as preconditioner for iterative methods.</p>
                             <!-- A DDM is a technique that splits the computational domain into several independent (overlapping) subdomains. Each subdomain computes its part of the solution. A coarse problem is used to coordinate the subdomain iterative process. By essence, these methods are extremely scalable. -->
 
                             We use <a href="https://freefem.org/">FREEFEM++</a> interfaced with <a href="https://www.mcs.anl.gov/petsc/">PETSc</a> to call <a href="https://github.com/hpddm/hpddm">HPDDM</a>, which, in turn, uses <a href="https://slepc.upv.es/">SLEPc</a>                            to solve eigenvalue problems to build the coarse operator. HPDDM needs to perform several linear solves. The resolutions occur at three levels: First, on the fine grid, we solve the problem on a portion of the initial mesh
