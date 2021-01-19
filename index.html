@@ -19,6 +19,9 @@
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <!-- <link rel="stylesheet" media="all" href="normalize.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <link rel="stylesheet" media="all" href="main.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -87,6 +90,13 @@
     </header>
     <main role="main">
 
+        <i class="bi bi-toggle-off"></i>
+        <button id="fr_click" type="button">Fr</button>
+        <button id="en_click" type="button">En</button>
+
+
+
+
         <section class="unityblock" id="about">
             <figure>
                 <!-- <a href="cv_Vincent_Darrigrand.pdf"> <img src="PhotoPerso.png " class="img-circle img-responsive center-block" alt="photo"></a> -->
@@ -96,9 +106,12 @@
             <h2>Bio <a style="color:gray; font-size-adjust: 0.5;" href="cv_Vincent_Darrigrand.pdf" title="Download CV"><i class="bi bi-file-earmark-person" ></i></a></h2>
 
             <div class="container">
-                <p>
+                <p lang="en-us" id="en">
                     I got my international Ph.D. degree in mathematics in September 2017 from the University of the Basque Country (UPV-EHU, Spain) and the University of Pau (UPPA, France) under the supervision of Prof. David Pardo (UPV-EHU) and Prof. Hélène Barucq (UPPA).
                     I was awarded the best possible distinction: Cum Laude. The thesis thematic was on error representations for mesh <em>p</em>-adaptivity for Goal-Oriented Problems applied to Helmholtz problems.
+                </p>
+                <p lang="fr" id="fr">
+                    J'ai obtenu mon diplome de PhD. en mathématiques blablabla
                 </p>
                 <p>
                     Until June 2019, I worked as a postdoctoral researcher in Bilbao with Prof. David Pardo in the
@@ -495,6 +508,58 @@
             zoomOffset: -1
         }).addTo(mymap);
     </script>
+
+    <script>
+        var french = document.getElementById('fr_click'),
+            english = document.getElementById('en_click'),
+            fr_txt = document.querySelectorAll('#fr'),
+            en_txt = document.querySelectorAll('#en'),
+            // fr_txt = document.querySelectorAll("*:lang(fr)"),
+            // en_txt = document.querySelectorAll("*:lang(en-us)"),
+            nb_fr = fr_txt.length,
+            nb_en = en_txt.length;
+
+        french.addEventListener('click', function() {
+            langue(french, english);
+        }, false);
+
+        english.addEventListener('click', function() {
+            langue(english, french);
+        }, false);
+
+        function langue(langueOn, langueOff) {
+            if (!langueOn.classList.contains('current_lang')) {
+                langueOn.classList.toggle('current_lang');
+                langueOff.classList.toggle('current_lang');
+            }
+            if (langueOn.innerHTML == 'Fr') {
+                afficher(fr_txt, nb_fr);
+                cacher(en_txt, nb_en);
+            } else if (langueOn.innerHTML == 'En') {
+                afficher(en_txt, nb_en);
+                cacher(fr_txt, nb_fr);
+            }
+        }
+
+        function afficher(txt, nb) {
+            for (var i = 0; i < nb; i++) {
+                txt[i].style.display = 'block';
+            }
+        }
+
+        function cacher(txt, nb) {
+            for (var i = 0; i < nb; i++) {
+                txt[i].style.display = 'none';
+            }
+        }
+
+        function init() {
+            langue(english, french);
+            // langue(french, english);
+        }
+        init();
+    </script>
+
 </body>
 
 </html>
