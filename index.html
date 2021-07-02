@@ -303,7 +303,7 @@
 
                             We use <a href="https://freefem.org/">FREEFEM++</a> interfaced with <a href="https://www.mcs.anl.gov/petsc/">PETSc</a> to call <a href="https://github.com/hpddm/hpddm">HPDDM</a>, which, in turn, uses <a href="https://slepc.upv.es/">SLEPc</a>                            to solve eigenvalue problems to build the coarse operator. HPDDM needs to perform several linear solves. The resolutions occur at three levels: First, on the fine grid, we solve the problem on a portion of the initial mesh
                             where a single process is running independently. Then, still, on the fine grid, an eigenvalue solve is performed. Finally, we can build a matrix on the coarse grid based on the eigenvectors and eigenvalues on each subdomain.
-                            We chose to use MUMPS solver for all these three linear resolutions to investigate the use of the recent Block-Low Rank (BLR) method to improve the scalability of the overall solver.
+                            We chose to use MUMPS solver for all these three linear resolutions to investigate the use of the recent Block-Low Rank (BLR) method to improve the complexity of the overall solver.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
