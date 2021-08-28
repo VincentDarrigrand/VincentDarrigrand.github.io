@@ -142,6 +142,7 @@
                     <li>Domain Decomposition</li>
                     <li>High-Performance Computing</li>
                     <li>Structural Mechanics</li>
+                    <li>Wave Propagation</li>
                 </ul>
 
 
@@ -297,13 +298,17 @@
                         </div>
                         <div class="modal-body">
                             <p>In the framework of a post-doc within the European Project <a href="https://www.eocoe.eu/">EoCoE II</a>, we are interested in linear elastic problems encountered in applications such as wind farms where structural mechanics
-                                are coupled with fluid dynamics. The need for scalable solvers is critical. I am investigating the use of Domain Decomposition Methods (DDM) coupled with <a href="http://mumps.enseeiht.fr">MUMPS</a> solver with the Block-Low
-                                Rank (BLR) feature as preconditioner for iterative methods.</p>
-                            <!-- A DDM is a technique that splits the computational domain into several independent (overlapping) subdomains. Each subdomain computes its part of the solution. A coarse problem is used to coordinate the subdomain iterative process. By essence, these methods are extremely scalable. -->
+                                are coupled with fluid dynamics. The need for scalable solvers is critical. I am investigating the use of Domain Decomposition Methods (DDM) coupled with direct solvers. We particularly investigate the use of some of their
+                                novel features such as the Block-Low Rank (BLR) feature and advanced tree multithreading to improve the complexity of the overall solver.
 
+
+                                <!-- with the Block-Low
+                                Rank (BLR) feature as preconditioner for iterative methods.</p> -->
+                                <!-- A DDM is a technique that splits the computational domain into several independent (overlapping) subdomains. Each subdomain computes its part of the solution. A coarse problem is used to coordinate the subdomain iterative process. By essence, these methods are extremely scalable. -->
+                                <!-- <a href="http://mumps.enseeiht.fr">MUMPS</a> solver
                             We use <a href="https://freefem.org/">FREEFEM++</a> interfaced with <a href="https://www.mcs.anl.gov/petsc/">PETSc</a> to call <a href="https://github.com/hpddm/hpddm">HPDDM</a>, which, in turn, uses <a href="https://slepc.upv.es/">SLEPc</a>                            to solve eigenvalue problems to build the coarse operator. HPDDM needs to perform several linear solves. The resolutions occur at three levels: First, on the fine grid, we solve the problem on a portion of the initial mesh
                             where a single process is running independently. Then, still, on the fine grid, an eigenvalue solve is performed. Finally, we can build a matrix on the coarse grid based on the eigenvectors and eigenvalues on each subdomain.
-                            We chose to use MUMPS solver for all these three linear resolutions to investigate the use of the recent Block-Low Rank (BLR) method to improve the complexity of the overall solver.
+                            We chose to use MUMPS solver for all these three linear resolutions to investigate the use of the recent Block-Low Rank (BLR) method to improve the complexity of the overall solver. -->
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-modal" data-dismiss="modal">Close</button>
@@ -438,19 +443,18 @@
             <figcaption class="figure-caption text-center">
             <a href="https://www.openstreetmap.org/?mlat=43.60218&amp;mlon=1.45499#map=19/43.60218/1.45499">2 rue Camichel, 31000 Toulouse, France</a>  </figcaption>
           </figure>
+
+
           </address>
-
-
-            <!-- You can contact me at:<br> -->
-            <!-- <a href="mailto:vincent.darrigrand@gmail.com">vincent.darrigrand [at] gmail.com </a><br> -->
-            <!-- <a href="tel:+33663488425">+33 (0) 6 63 48 84 25</a><br> -->
+            <div>
+                <p>Last update: August 28, 2021</p>
+            </div>
 
 
         </section>
     </main>
 
     <footer class="fixed-bottom">
-        <!-- <div class="col-xs-2 col-sm-2"></div> -->
 
         <a itemprop="sameAs" content="https://orcid.org/0000-0001-7818-8216" href="https://orcid.org/0000-0001-7818-8216" target="orcid.widget" rel="me noopener noreferrer"><i  class="ai ai-orcid "></i></a>
 
@@ -460,21 +464,17 @@
 
         <a href="https://scholar.google.com/citations?user=qqCseioAAAAJ&hl" style="vertical-align:top; "><i  class="ai ai-google-scholar"></i></a>
 
-        <!-- <div class="col-xs-2 col-sm-2"></div> -->
     </footer>
 
     <!--                   Scripts               -->
-    <!-- bibtex-js -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script> -->
-    <!-- <script type="text/javascript" src="bibtex_js.js"></script> -->
+
+
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script>
 
     <!-- font awsome -->
     <script src="https://kit.fontawesome.com/f0f2f8d409.js" crossorigin="anonymous"></script>
 
-    <!-- bootstrap -->
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
@@ -495,6 +495,9 @@
             zoomOffset: -1
         }).addTo(mymap);
     </script>
+
+
+
 </body>
 
 </html>
