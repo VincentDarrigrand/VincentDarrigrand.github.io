@@ -222,6 +222,18 @@ footer {
     }
 }
 
+figcaption {
+    padding: 0.5em;
+    text-align: center;
+    font-style: italic;
+}
+
+#about .cv {
+    display: flex;
+    margin-bottom: 1rem!important;
+    justify-content: space-around;
+}
+
 
 /*
 4.2. Research
