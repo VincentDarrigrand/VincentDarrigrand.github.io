@@ -31,12 +31,19 @@
   % url      = {https://arxiv.org/abs/2208.01079},
 }
 
-@Article{Caro.Darrigrand.ea2022a,
-  author   = {Felipe Caro and Vincent Darrigrand and Julen Alvarez-Arramberri and Elisabete Alberdi-Celaya and David Pardo},
-  journal  = {Computer Methods in Applied Mechanics and Engineering (In press)},
-  title    = {A Painless Multi-level Automatic Goal-Oriented hp-Adaptive Coarsening Strategy},
+
+@article{Caro.Darrigrand.ea2022a,
+  title    = {A painless multi-level automatic goal-oriented hp-adaptive coarsening strategy for elliptic and non-elliptic problems},
+  journal  = {Computer Methods in Applied Mechanics and Engineering},
+  volume   = {401},
+  pages    = {115641},
   year     = {2022},
-  pubstate = {accepted in CMAME},
+  issn     = {0045-7825},
+  doi      = {https://doi.org/10.1016/j.cma.2022.115641},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0045782522005965},
+  author   = {Felipe V. Caro and Vincent Darrigrand and Julen Alvarez-Aramberri and Elisabete Alberdi and David Pardo},
+  keywords = {Goal-oriented adaptivity, -adaptivity, Finite element method, Unrefinements, Non-elliptic problems},
+  abstract = {This work extends an automatic energy-norm hp-adaptive strategy based on performing quasi-optimal unrefinements to the case of non-elliptic problems and goal-oriented adaptivity. The proposed approach employs a multi-level hierarchical data structure and alternates global h- and p-refinements with a coarsening step. Thus, at each unrefinement step, we eliminate the basis functions with the lowest contributions to the solution. When solving elliptic problems using energy-norm adaptivity, the removed basis functions are those with the lowest contributions to the energy of the solution. For non-elliptic problems or goal-oriented adaptivity, we propose an upper bound of the error representation expressed in terms of an inner product of the specific equation, leading to error indicators that deliver quasi-optimal hp-unrefinements. This unrefinement strategy removes unneeded unknowns possibly introduced during the pre-asymptotical regime. In addition, the grids over which we perform the unrefinements are arbitrary, and thus, we can limit their size and associated computational costs. We numerically analyze our algorithm for energy-norm and goal-oriented adaptivity. In particular, we solve two-dimensional (2D) Poisson, Helmholtz, convection-dominated equations, and a three-dimensional (3D) Helmholtz-like problem. In all cases, we observe exponential convergence rates. Our algorithm is robust and straightforward to implement; therefore, it can be easily adapted for industrial applications.}
 }
 
 @article{KruseDarrigrandea2020,
