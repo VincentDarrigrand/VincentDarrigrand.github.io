@@ -22,13 +22,18 @@
 }
 
 @article{Darrigrand.Dumistrasc.ea:2022,
-  author   = {Vincent Darrigrand and Andrei Dumistrasc and Carola Kruse and Ulrich Ruede},
-  title    = {Inexact inner-outer {G}olub-{K}ahan {B}idiagonalization method},
-  journal   = {Numerical Linear Algebra with Applications (Submitted)},
-  year     = {2022},
-  doi      = {10.48550/ARXIV.2208.01079},
-  pubstate = {Submitted to NLAA},
-  % url      = {https://arxiv.org/abs/2208.01079},
+author = {Vincent Darrigrand and Andrei Dumistrasc and Carola Kruse and Ulrich Ruede},
+title = {Inexact inner-outer Golub-Kahan bidiagonalization method: A relaxation strategy},
+journal = {Numerical Linear Algebra with Applications},
+volume = {n/a},
+number = {n/a},
+pages = {e2484},
+year     = {2022},
+keywords = {Golub-Kahan bidiagonalization, inner-outer iterative methods, saddle-point problems, Stokes equation},
+doi = {https://doi.org/10.1002/nla.2484},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/nla.2484},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/nla.2484},
+abstract = {We study an inexact inner-outer generalized Golub-Kahan algorithm for the solution of saddle-point problems with a two-times-two block structure. In each outer iteration, an inner system has to be solved which in theory has to be done exactly. Whenever the system is getting large, an inner exact solver is, however, no longer efficient or even feasible and iterative methods must be used. We focus this article on a numerical study showing the influence of the accuracy of an inner iterative solution on the accuracy of the solution of the block system. Emphasis is further given on reducing the computational cost, which is defined as the total number of inner iterations. We develop relaxation techniques intended to dynamically change the inner tolerance for each outer iteration to further minimize the total number of inner iterations. We illustrate our findings on a Stokes problem and validate them on a mixed formulation of the Poisson problem.}
 }
 
 
